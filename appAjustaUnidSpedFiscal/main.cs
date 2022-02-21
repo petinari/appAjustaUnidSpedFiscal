@@ -4,7 +4,7 @@ class TestClass
 {
     static void Main(string[] args)
     {
-        var arquivo = new List<String>(System.IO.File.ReadLines(@"/Users/robsonpetinari/Documents/EFD_00094_00001.txt"));
+        var arquivo = new List<String>(System.IO.File.ReadLines(@"/Users/robsonpetinari/Documents/EFD_00267_00001.txt"));
         var _0200List = new List<String>();
         var _C170List = new List<String>();
         int erros = 0;
