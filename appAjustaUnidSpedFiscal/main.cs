@@ -4,7 +4,19 @@ class TestClass
 {
     static void Main(string[] args)
     {
-        var arquivo = new List<String>(System.IO.File.ReadLines(@"/Users/robsonpetinari/Documents/EFD_00267_00001.txt"));
+        //le o input do arquivo txt
+        Console.WriteLine("Digite o caminho do arquivo txt: ");
+
+        
+
+        string caminho = Console.ReadLine();
+
+        //remove as aspas do caminho
+        caminho = caminho.Replace("\"", "");
+        
+        var arquivo = new List<String>(System.IO.File.ReadLines(caminho));
+
+
         var _0200List = new List<String>();
         var _C170List = new List<String>();
         int erros = 0;
@@ -42,6 +54,6 @@ class TestClass
             }
         }
         Console.WriteLine(erros);
-        System.IO.File.WriteAllLines(@"/Users/robsonpetinari/Documents/EFD.txt", arquivo);
+        System.IO.File.WriteAllLines(caminho, arquivo);
     }
 }
